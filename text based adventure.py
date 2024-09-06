@@ -1,5 +1,4 @@
 import time,sys
-import turtle
 import random
 print("\033c")
 def text(text):
