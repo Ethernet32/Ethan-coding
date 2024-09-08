@@ -166,7 +166,7 @@ def give_item():
   elif item_chance==1:
     itemlist["cellphone"]+=1
 
-rooms=["001","002","003","004","princibles office","005","006","007","008]
+rooms=["001","002","003","004","princibles office","005","006","007","008"]
 start()
 text("You come across your classes")
 for i in range:
