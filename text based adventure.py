@@ -29,12 +29,12 @@ def g_ending():
 
 def b_ending():
   print("\033c")
-  text("You failed. You won’t get to college with your friends. You will be stuck at this school for another year.")
+  text("You failed. You won't get to college with your friends. You will be stuck at this school for another year.")
   next()
 math={1 : "7*8",2 : "5*9",3:"6^2",4:"40/8",5:"2345+890",6:"solve for X: 3x+2=11",7: "5^3",8: "4*12", 9: "360/5", 10: "solve for X:7x+3=17"}
 science={1: "What is the atomic number for helium",2: "What is the symbol for Iron on the periodic table",3: "True or false: a plant with out water will die", 4: "Is water lava",5: "What does DNA stand for",6: "True or false sodium reacts violently to water",7: "What is the symbol for soidium on the periodic table",8: "what is the atomic number of Oxygen",9: "How many teeth dohumans have",10: "True or false sound travels faster than light"}
 health={1: "What body system does the heart belong to",2: "True or false you can't live with out the resitry system",3: "What food group contains meats and eggs", 4: "how many teeth should a human adult have",5: "True or false You need 8 hours of sleep each night",6: "True or false milk can only come from cows",7: "what food group contain bread",8: "What body system does the small intestine belong to",9: "True or false You don't need 8 hours of sleep each night",10: "What food groups contais milk and icecream"}
-princible={}
+princible={1:"1+1"}
 def empty_room():
   text("the is empty, but they left something behind")
   give_item()
@@ -42,8 +42,9 @@ def empty_room():
 math_answer={1 : "56",2 : "45",3:"36",4:"5",5:"3235",6:"3" ,7: "125",8: "48", 9: "72", 10: "2"}
 science_answer={1: "2",2: "Fe",3: "true", 4: "yes",5: "Deoxyribonucleic acid",6: "true",7: "Na",8: "8",9: "32",10: "false"}
 health_answer={1: "cardiovascular system",2: "true",3: "protein", 4: 32,5: "true",6: "false",7: "grain",8: "digestive system",9: "false",10: "dairy"}
+principle_answer={1:2}
 subjet=[ math, science, health,principle]
-answers=[math_answer,science_answer,health_answer,princible_answer]
+answers=[math_answer,science_answer,health_answer,principle_answer]
 
 itemlist = {"notebook":0,"whiteout":0,"cellphone":0}
 items = ["notebook","whiteout","cellphone"]
@@ -166,25 +167,35 @@ def give_item():
   elif item_chance==1:
     itemlist["cellphone"]+=1
 
-rooms=["001","002","003","004","princibles office","005","006","007","008"]
+rooms=["001","002","003","004","005","006","007","008","principles office"]
 start()
 text("You come across your classes")
-for i in range:
-  text(value[i])
-roomspick=input("pick your classs")
-if str(rooms)="001":
+print("")
+for i in range(len(rooms)):
+  print(rooms[i])
+print("")
+roomspick=input("pick your classs"+"\n")
+if str(rooms)=="001":
   empty_room()
-elif str(rooms)="002":
+elif str(rooms)=="002":
+  text("this is science class")
   combat(science,science_answer, "science")
-elif str(rooms)="003":
+elif str(rooms)=="003":
+  text("this is math class")
   combat(math,math_answer, "math")
-elif str(rooms)="004":
+elif str(rooms)=="004":
   empty_room()
-elif str(rooms)="005":
+elif str(rooms)=="005":
+  text("this is math class")
   combat(math,math_answer, "math")
-elif str(rooms)="006":
+elif str(rooms)=="006":
   empty_room()
-elif str(rooms)="007":
+elif str(rooms)=="007":
+  text("this is health class")
   combat(health,health_answer, "health")
-elif str(rooms)="008":
+elif str(rooms)=="008":
   empty_room()
+elif str(rooms)=="principles office":
+  text("this is the pricibles office.")
+  if classespassed>=3
+  combat(principle,principle_answer, "principle")
