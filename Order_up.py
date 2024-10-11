@@ -12,21 +12,24 @@ class Order:
         return f"Drink: {self.drink}\nAppetizer: {self.appetizer}\nMain Course: {self.main}\nSide One: {self.side1}\nSide Two: {self.side2}\nDessert: {self.dessert}"
     @classmethod
     def ordering(self):
-        order=input("What would you like to order\na. Drink\nb. Appetizer\nc. Main Course\nd. Side One\ne. Side Two\nf. Dessert")
+        order=input("What would you like to order\na. Drink\nb. Appetizer\nc. Main Course\nd. Side One\ne. Side Two\nf. Dessert\n")
         if order == "a":
-            see_menu=input("Would you like o see a menu before you order(y/n)")
+            see_menu=input("Would you like o see a menu before you order(y/n)\n")
             if see_menu=="y":
                 for i in drink_menu:
-                    print(f"{drink_menu.keys([i])}")
-            drink_choice=input("What drink Do you want")
-            if drink_choice in drink_menu:
-                return f"{drink_choice} is {drink_menu.get()}"
+                    print(f"{i}. {drink_menu[i]}")
+            drink_choice=input("What drink Do you want\n")
+            if int(drink_choice) in drink_menu:
+                return f"{drink_menu[int(drink_choice)]} is {drink_prices.get(int(drink_choice))}"
+            else:
+                return f"Invalid response"
 
 
-drink_menu={"coke":1,",milk":2}
+drink_menu={1:"Coke",2:"Milk"}
+drink_prices={1:1.25}
 appetizer_menu={}
 main_menu={}
 side_menu={}
 dessert_menu={}
 order1=Order()
-order1.ordering()
+print(order1.ordering())
