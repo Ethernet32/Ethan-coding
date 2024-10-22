@@ -1,0 +1,19 @@
+what is UML
+UML Unifined Modleing Langauge
+
+
+what are he 2 catagories of UML diagrams
+sturcture diagram, behavior diagram
+
+what diagrams are in each catagory
+sturcture diagram: composite structure, profile, package, deployment, class, object,coponent
+
+behavior diagram: activty, use case, state, machine; interaction: sequence, communiction, iteraction, timing
+
+Class	+attribute1:type = defaultValue
++operation1(params):returnType
+-operation2(params)
+-operation3()
+
++ = public
+- = private
