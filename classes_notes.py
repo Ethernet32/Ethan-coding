@@ -8,10 +8,10 @@ class Animal:
     def __init__(self,name, species,age,gender,rarity):
         self.name = name
         self.species = species
-@@ -19,10 +23,7 @@ def fight(self,other):
-            other.losses += 1
-            self.losses += 1
-            return "Tie"
+    def fight(self,other):
+        other.losses += 1
+        self.losses += 1
+        return "Tie"
     #use __str__ to print something so we know it does something
     #makes it more readble
     def __str__(self):

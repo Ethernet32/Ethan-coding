@@ -10,7 +10,6 @@ class Order:
         self.dessert=dessert
     def __str__(self):
         return f"Drink: {self.drink}\nAppetizer: {self.appetizer}\nMain Course: {self.main}\nSide One: {self.side1}\nSide Two: {self.side2}\nDessert: {self.dessert}"
-    @classmethod
     def ordering(self):
         global price
         order=input("What would you like to order\na. Drink\nb. Appetizer\nc. Main Course\nd. Side One\ne. Side Two\nf. Dessert\n")
@@ -19,8 +18,8 @@ class Order:
             see_menu=input("Would you like to see a menu before you order(y/n)\n")
             print("\033c")
             if see_menu=="y":
-                dm=drink_menu.keys()
-                for k in dm:
+                mm=drink_menu.keys()
+                for k in mm:
                     print(k)
             drink_choice=input("What drink Do you want\n")
             drink_choice.strip()
@@ -39,8 +38,8 @@ class Order:
             see_menu=input("Would you like to see a menu before you order(y/n)\n")
             print("\033c")
             if see_menu=="y":
-                am=appetizer_menu.keys()
-                for k in am:
+                mm=appetizer_menu.keys()
+                for k in mm:
                     print(k)
             appetizer_choice=input("What appetizer Do you want\n")
             appetizer_choice.strip()
@@ -79,8 +78,8 @@ class Order:
             see_menu=input("Would you like to see a menu before you order(y/n)\n")
             print("\033c")
             if see_menu=="y":
-                sm=side_menu.keys()
-                for k in sm:
+                mm=side_menu.keys()
+                for k in mm:
                     print(k)
             side_choice=input("What side Do you want\n")
             side_choice.strip()
@@ -99,8 +98,8 @@ class Order:
             see_menu=input("Would you like o see a menu before you order(y/n)\n")
             print("\033c")
             if see_menu=="y":
-                sm=side_menu.keys()
-                for k in sm:
+                mm=side_menu.keys()
+                for k in mm:
                     print(k)
             side_choice=input("What side Do you want\n")
             side_choice.strip()
@@ -119,8 +118,8 @@ class Order:
             see_menu=input("Would you like to see a menu before you order(y/n)\n")
             print("\033c")
             if see_menu=="y":
-                dm=dessert_menu.keys()
-                for k in dm:
+                mm=dessert_menu.keys()
+                for k in mm:
                     print(k)
             dessert_choice=input("What drink Do you want\n")
             dessert_choice.strip()
@@ -155,13 +154,15 @@ appetizer_menu={"bruschetta":10.01,"bread":1.01,"chips":2.51,"guacamole":0.21}
 main_menu={"hamburger":17.11,"pizza":9.76,"lobster":50.32}
 side_menu={"fries":3.61,"sushi":6.51,"chicken_nuggets":9.52}
 dessert_menu={"icecream":4.01,"sugar":9.46,"chaco_taco":99.53}
-order1=Order(drink=None, appetizer=None, main=None, side1=None, side2=None, dessert=None)
+order=Order(None, None, None, None, None, None)
 
 start=input("would you like place your order(y/n)")
 if start == "y":
     while True:
-        print(order1.ordering())
+        print(order.ordering())
+        see_order=input("woul you like to see your order(y/n)")
         check_out=input("would you like to check out(y/n)")
-        if check_out:
-            print(order1.check_out())
+        if check_out == "y":
+            print(order.check_out())
+            break
         print("\033c")
