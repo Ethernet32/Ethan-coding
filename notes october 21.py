@@ -7,7 +7,7 @@ class PetStore:
         self.featured_pet = None
     
     def add_pet(self, animal):
-        #assert will check i statement is true and stop coe i false
+        #assert will check i statement is true and stop code is false
         #isinstance is lik isnum and just checks if it is an instance
         assert isinstance(animal,Animal)
         self.animals.append(animal)

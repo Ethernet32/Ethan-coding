@@ -19,6 +19,7 @@ class IceCream(DessertItem):
         super().__init__(name)
         self.scoop_count=scoop_count
         self.price_per_scoop=price_per_scoop
+
 class Sundae(IceCream):
     def __init__(self, name, scoop_count, price_per_scoop, topping_name, topping_price):
         super().__init__(name, scoop_count, price_per_scoop)
