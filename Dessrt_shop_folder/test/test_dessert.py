@@ -1,10 +1,16 @@
-from dessert import (
+from Dessrt_shop_folder.dessert import (
     DessertItem,
     Candy,
     Cookie,
     IceCream,
     Sundae
 )
+
+def test_DessertItem():
+    testdessertitem = DessertItem("chocolate")
+    assert testdessertitem.name == "chocolate"
+    assert testdessertitem.name != "amoung us"
+    assert testdessertitem.name != "tootsie roll"
 
 def test_Candy():
     testcandy = Candy("snickers",3.5,1.60)
