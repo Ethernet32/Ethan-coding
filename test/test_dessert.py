@@ -15,3 +15,19 @@ def test_Candy():
 def test_Cookie():
     testcookie = Cookie("snickerdoodle",6,1.20)
     assert testcookie.name == "snickerdoodle"
+    assert testcookie.cookie_quantity == 6
+    assert testcookie.price_per_dozen == 1.20
+
+def test_IceCream():
+    testicecream = IceCream("green", 3, 4.53)
+    assert testicecream.name == "green"
+    assert testicecream.scoop_count == 3
+    assert testicecream.price_per_scoop == 4.53
+
+def test_Sundae():
+    testsundae = Sundae("banana split", 3, 4.53,"Green bits", 0.1)
+    assert testsundae.name == "banana split"
+    assert testsundae.scoop_count == 3
+    assert testsundae.price_per_scoop == 4.53
+    assert testsundae.topping_name == "Green bits"
+    assert testsundae.topping_price == 0.1
