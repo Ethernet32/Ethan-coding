@@ -1,6 +1,8 @@
 class DessertItem:
     def __init__(self, name):
         self.name=name
+    def __str__(self):
+        return f"{self.name}"
 
 class Candy(DessertItem):
     def __init__(self, name, candy_weight, price_per_pound):
