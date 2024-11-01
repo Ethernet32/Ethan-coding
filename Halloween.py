@@ -33,5 +33,6 @@ def main():
     warhammer.add(ImperiumOfMan("Imperium of Man","Space marines","ethics"))
     for item in warhammer.list:
         print(item)
+        print()
 main()
         
