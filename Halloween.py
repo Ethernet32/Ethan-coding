@@ -15,7 +15,7 @@ class Ork(Monster):
     def __init__(self, name, attack, weakness):
         super().__init__(name, attack, weakness)
 class ImperiumOfMan(Monster):
-    #because the ture monster is the imperium of man
+    #because the true monster is the imperium of man
     def __init__(self, name, attack, weakness):
         super().__init__(name, attack, weakness)
 
